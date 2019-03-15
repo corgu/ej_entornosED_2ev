@@ -1,20 +1,39 @@
+/**
+ * Ejerciciodeexamen
+ *
+ * @author IFC
+ * 
+ * @version 1.0.0
+ */
 package code;
 
 
 public class MinimoComunMultiplo {
   public MinimoComunMultiplo() {}
+  /**
+   * Clase minimo comun multiplo
+   * @param args
+   * @return
+   */
 
   public int candidatosMcM(int[] args) {
     if (args.length < 2) {
       throw new IllegalArgumentException(
         "Hacen falta dos o más números"
       );
+      /**
+       * Esta es la comprobacion de que los numeros deben tener una longitud concreta como
+       * maximo, sino nos aparecera error
+       */
     }
 
     if (algunoEsCero(args)) {
       throw new IllegalArgumentException(
         "Los números no pueden ser cero"
       );
+      /**
+       * Los numeros tampoco pueden ser cero, sino estara mal
+       */
     }
 
     args = abs(args);
@@ -32,6 +51,9 @@ public class MinimoComunMultiplo {
   }
 
   private boolean algunoEsCero(int[] ints) {
+	  /**
+	   * Este nos muestra que un numero no puede ser 0
+	   */
     for (int d : ints) {
       if (d == 0) {
         return true;
@@ -64,6 +86,9 @@ public class MinimoComunMultiplo {
   
 
   private boolean esMinimoComunMultiplo(int d, int[] ints) {
+	  /**
+	   * comprueba si es correcto y es minimo comun multiplo
+	   */
     for (int i = 0; i < ints.length; i += 1) {
       if (d % ints[i] != 0) {
         return false;
