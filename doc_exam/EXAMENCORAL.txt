@@ -1,0 +1,31 @@
+### Ejercicios
+
+1. (2 puntos)
+	* Crea una rama nueva del proyecto a partir de la rama develop, llámala doc.
+Con esto la he creado y he entrado en ella.
+git checkout -b doc
+ 	* Elabora la documentación de Javadoc para cada clase, método y propiedad.
+
+2. (2 puntos)
+ 	* Crea una rama nueva del proyecto a partir de la rama develop, llámala tests.
+git checkout develop
+git branch tests
+git checkout tests
+ 	* Escribe Test JUnit para las clases actuales del proyecto.
+Hago click en 'ejecutar como' y selecciono JUnit en las 3 clases.
+Creo un nuevo JUnit.
+ 	* Ejecuta los test JUnit que has creado.
+
+3. (1 puntos)
+	* Añade al fichero .gitignore lo que consideres adecuado para el proyecto. (Pista: Los ficheros .class no deben subirse al repositorio)
+
+4. (2 puntos)
+	* Integra todos los cambios de las ramas que has hecho en develop.
+git checkout develop
+git merge tests doc
+	* Etiqueta la versión generada tras la integración.
+git tag 1.0.0 
+	* Envía los cambios de nuevo a tu repositorio en github.
+git add .
+git commit -m
+git push origin master
